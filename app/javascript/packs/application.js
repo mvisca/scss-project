@@ -6,9 +6,17 @@
 import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
+
 import "channels";
 import "bootstrap";
+
+import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initUpdateNavbarOnScroll();
+});
