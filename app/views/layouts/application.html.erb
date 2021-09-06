@@ -2,15 +2,19 @@
 <html>
   <head>
     <title>RailsFrontend</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IEP=edge,chrom=1">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="template-logo"></div>
+  <%= image_tag "logo.png", alt: "logo", width: 200 %>
     <%= yield %>
   </body>
-</html>
+</html->
