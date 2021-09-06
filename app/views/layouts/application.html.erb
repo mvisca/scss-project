@@ -9,12 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IEP=edge,chrom=1">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-  <div class="template-logo"></div>
-  <%= image_tag "logo.png", alt: "logo", width: 200 %>
+  <%# <div class="template-logo"></div>
+  <%= image_tag "logo.png", alt: "logo", width: 200 %> %>
+    <%= render "components/navbar" %>
     <%= yield %>
   </body>
 </html->
