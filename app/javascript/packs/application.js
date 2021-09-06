@@ -11,6 +11,7 @@ import "channels";
 import "bootstrap";
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { loadDynamicBannerText } from '../components/banner';
 
 Rails.start()
 Turbolinks.start()
@@ -19,4 +20,5 @@ ActiveStorage.start()
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  loadDynamicBannerText();
 });
